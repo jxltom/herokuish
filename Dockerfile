@@ -1,5 +1,5 @@
-FROM heroku/cedar:14
-RUN curl "https://github.com/gliderlabs/herokuish/releases/download/v0.3.33/herokuish_0.3.33_linux_x86_64.tgz" \
+FROM registry.docker-cn.com/heroku/cedar:14
+RUN curl "http://helmsman-firmware.oss-cn-hongkong.aliyuncs.com/herokuish/v0.3.33/herokuish_0.3.33_linux_x86_64.tgz" \
 		--silent -L | tar -xzC /bin
 RUN /bin/herokuish buildpack install \
 	&& ln -s /bin/herokuish /build \
